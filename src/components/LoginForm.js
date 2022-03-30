@@ -1,63 +1,39 @@
 
-import { Row, Col, Button, Form } from "react-bootstrap";
+import { Row, Col, Button, Form,Container } from "react-bootstrap";
 
 import React, { useState, useEffect } from "react";
 import FormContainer from "./FormContainer";
 function LoginForm() {
 
-    const submitHandler = (e) => {
-        e.preventDefault();
+  
+    return (
+      <>
+          <Container>
+              <h1 className="shadow-sm text-success mt-5 p-3 text-center rounded">CARPEN USER</h1>
+              <Row className="mt-5">
+                  <Col lg={5} md={6} sm={12} className="p-5 m-auto shadow-sm rounded-lg">
+                      <Form>
+                          <Form.Group controlId="formBasicEmail">
+                              <Form.Label>Email address</Form.Label>
+                              <Form.Control type="email" placeholder="Enter email" />
+                          </Form.Group>
+
+                          <Form.Group controlId="formBasicPassword">
+                              <Form.Label>Password</Form.Label>
+                              <Form.Control type="password" placeholder="Password" />
+                          </Form.Group>
+
+                          <Button className="my-3"variant="success btn-block" type="submit">
+                              Login
+                          </Button>
+                      </Form>
+                  </Col>
+              </Row>
+              <h6 className="mt-5 p-5 text-center text-secondary ">Copyright © 2022</h6>
+          </Container>
+      </>
+  );
     
-    
-      };
-    
-
-    const [email, setEmail] = useState("");
-    const [password, setpassword] = useState("");
-  return (
-    <FormContainer>
-      <h1>Carpen </h1>
-
-     
-
-      <Form onSubmit={submitHandler}>
-        <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-
-        <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setpassword(e.target.value)}
-          />
-        </Form.Group>
-
-        <Button type="submit" variant="primary" className="mt-3">
-          Iniciar sesion
-        </Button>
-
-       
-      </Form>
-
-      <Row className="">
-        <Col>
-        <Button type="submit" variant="primary" className="mt-3">
-          Registrarse
-        </Button>
-          
-        </Col>
-      </Row>
-    </FormContainer>
-  )
 }
 
 export default LoginForm
