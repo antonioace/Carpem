@@ -2,6 +2,7 @@ import React from 'react'
 import FormContainer from './FormContainer'
 import {Form,Button} from 'react-bootstrap'
 function RegistroTaller() {
+    
   return (
     <FormContainer>
             <h1 className="text-center text-success">Registro Taller</h1>
