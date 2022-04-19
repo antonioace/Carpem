@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FormContainer from './FormContainer'
 import {Form,Button} from 'react-bootstrap'
 function RegistroTaller() {
-    
+    const [nombre,setNombre]=useStateate('')
+    const [latitud,setLatitud]=useState('')
+    const [longitud,setLongtiud]=useState('')
+    const [direccion,setDireccion]=useState('')
+    const [telefono,setTelefono]=useState('')
+    const [email,setEmail]=useState('')
+    const [pagina,setPagina]=useState('')
   return (
     <FormContainer>
             <h1 className="text-center text-success">Registro Taller</h1>
